@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../favicon sonic/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>...</title>
+</head>
+
+
+<body>
+<img class="giffeiao" src="corasao.gif">
+<img class="giffeio" src="baloes1.gif">
+
+<input id="butao" type="button" onmouseover="jumpscare(); openFullscreen();" value="Parabéns Rafael"/>
+<img class="giffeio" src="baloes1.gif">
+<img class="giffeiao" src="baloes2.gif">
+<img id="jumpscare" src="fnaf_foxy.gif"/>
+<audio id="scream" src="fnafaudio.mp3"/>
+
+<script>
+/* Get the element you want displayed in fullscreen mode (a video in this example): */
+var elem = document.getElementById("jumpscare");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function jumpscare() {
+var jumpscare = document.getElementById("jumpscare");
+jumpscare.style.visibility="visible";
+var audio = document.getElementById("scream");
+  audio.play();
+}
+</script>
+
+</body>
+</html>
